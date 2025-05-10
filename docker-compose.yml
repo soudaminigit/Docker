@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+   
+     
+   churn_modelling_rf:
+     build: ./RandomForest
+     container_name: churn_random
+     ports:
+       - '8000:8000'
+   chrun_modelling_svm:
+     build: 
+       context: ./SVM
+       dockerfile: Dockerfile
+     image: churn_svm
+     ports:
+       - 8010:8010
+    
+       
